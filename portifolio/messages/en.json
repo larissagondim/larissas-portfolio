@@ -16,8 +16,6 @@
         "subtitle": "computer science student and artificial intelligence enthusiast.",
         "location": "brazil",
         "university": "federal university of paraíba - ufpb",
-        "buttonProjects": "view projects",
-        "buttonContact": "get in touch",
         "tags": {
             "cc": "computer science",
             "ai": "artificial intelligence",
@@ -105,45 +103,6 @@
             "repository": "https://github.com/larissagondim/Beecrowds"
         }
     ],
-    "Experience": [
-        {
-            "id": "trilha-trainee",
-            "role": "student",
-            "company": "trilha (extension project - ufpb)",
-            "period": "jul 2025 - nov 2025",
-            "shortDescription": "practical training and immersion in web/mobile software development, focusing on programming best practices, architecture, and version control.",
-            "achievements": [
-                "collaborated in teams to develop a web application designed to store post-operative information for medical patients.",
-                "learned and applied front-end, back-end, data, and AI technologies, alongside version control tools using Git/GitHub.",
-                "participated in mentorships and networking opportunities that accelerated my technical and professional growth."
-            ]
-        },
-        {
-            "id": "aria-unimed",
-            "role": "AI researcher",
-            "company": "aria (artificial intelligence applications) & unimed jp",
-            "period": "oct 2025 - present",
-            "shortDescription": "collaboration on the development of AI computing solutions focused on digitizing handwritten processes within the healthcare and hospital sector.",
-            "achievements": [
-                "developed image processing and OCR pipelines to digitize handwritten medical prescriptions.",
-                "conducted scientific research on multimodal vision-language modeling applied to clinical document recognition.",
-                "focused on mitigating human errors in interpretation and optimizing response times within hospital triage workflows."
-            ]
-        },
-        {
-            "id": "tail-trainee",
-            "role": "artificial intelligence trainee",
-            "company": "tail (technology and artificial intelligence league - ufpb)",
-            "period": "dec 2025 - present",
-            "shortDescription": "training in data science and artificial intelligence through classes, activities, and hands-on projects.",
-            "achievements": [
-                "built study notebooks focused on python, pandas, numpy, scikit-learn, tensorflow, and keras.",
-                "developed the pauta project, centered on web scraping and extracting legislative data from municipal chambers.",
-                "engineered structured text cleaning workflows, tokenization, lemmatization, and topic modeling processes.",
-                "leveraged LLMs via groq API alongside BERT embeddings and autoencoder architectures for recommendation engines."
-            ]
-        }
-    ],
     "Education": [
         {
             "id": "graduation",
@@ -221,5 +180,12 @@
                 ]
             }
         ]
+    },
+    "Labels": {
+        "contributions": "key contributions",
+        "code": "view code"
+    },
+    "Contact": {
+        "text": "feel free to reach out via email or linkedin."
     }
 }

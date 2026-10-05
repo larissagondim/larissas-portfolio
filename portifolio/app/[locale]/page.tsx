@@ -1,140 +1,92 @@
 import GithubActivity from "@/components/github-activity";
-import GradientBackground from '@/components/GradientBackground';
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import { FadeUp } from "@/components/FadeUp";
-import { SlideIn } from "@/components/SlideIn";
+import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/Projects";
-import { ExperienceSection } from "@/components/Experience";
-import { EducationSection } from "@/components/Education";
-import { SkillsSection } from "@/components/Skills";
+import { ExperienceList } from "@/components/Experience";
+import { EducationList } from "@/components/Education";
+import { SkillsList } from "@/components/Skills";
 
 import ptMessages from "@/messages/pt.json";
 import enMessages from "@/messages/en.json";
 
+const contacts = [
+  { label: "email", href: "mailto:gondimvilasboaslarissa@gmail.com" },
+  { label: "linkedin", href: "https://linkedin.com/in/larissagondim" },
+  { label: "github", href: "https://github.com/larissagondim" },
+];
+
+// Converte "[texto](url)" em links.
+function renderLinks(text: string) {
+  return text.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return m ? (
+      <a key={i} href={m[2]} target="_blank" rel="noopener noreferrer" className="underline">
+        {m[1]}
+      </a>
+    ) : (
+      part
+    );
+  });
+}
+
 interface HomeProps {
-  params: Promise<{
-    locale: string;
-  }>;
+  params: Promise<{ locale: string }>;
 }
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   const currentLocale = locale === "en" ? "en" : "pt";
   const messages = currentLocale === "en" ? enMessages : ptMessages;
-  const skillsData = messages.Skills || { title: "", categories: [] };
-  const projects = messages.Projects || [];
-  const experiences = messages.Experience || [];
-  const educations = messages.Education || [];
+  const { Nav } = messages;
 
   return (
-    <main className="min-h-screen dark:bg-black relative overflow-x-hidden isolate">
-
-      <div className="fixed inset-0 -z-10 pointer-events-none mix-blend-mode-normal">
-        <GradientBackground />
-      </div>
-
+    <>
       <Navbar />
+      <main className="mx-auto flex max-w-4xl flex-col gap-20 px-4 pb-24 pt-28">
+        <Hero />
+        <GithubActivity />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-24 pb-12 flex flex-col gap-12">
-        <section className="scroll-m-20">
-          <Hero />
-        </section>
+        <Section id="sobre" title={Nav.about}>
+          <p className="leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
+        </Section>
 
-        <section className="scroll-m-28">
-          <GithubActivity />
-        </section>
+        <Section id="projetos" title={Nav.projects}>
+          <div className="grid items-stretch gap-6 md:grid-cols-2">
+            {messages.Projects.map((project) => (
+              <ProjectCard key={project.id} project={project} labels={messages.Labels} />
+            ))}
+          </div>
+        </Section>
 
-        <SlideIn direction="left">
-          <section id="sobre" className="flex flex-col gap-4 scroll-m-28">
-            <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white lowercase">
-              {messages.About?.title}
-            </h2>
-            <p className="text-[#1F2430]/80 dark:text-white/80 leading-relaxed text-sm sm:text-base">
-              {messages.About?.description}
-            </p>
-          </section>
-        </SlideIn>
+        <Section id="habilidades" title={Nav.skills}>
+          <SkillsList categories={messages.Skills.categories} />
+        </Section>
 
-        <FadeUp>
-          <section id="projetos" className="flex flex-col gap-6 scroll-m-28">
-            <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white lowercase">
-              {currentLocale === "en" ? "featured projects" : "projetos de destaque"}
-            </h2>
+        <Section id="experiencia" title={Nav.experience}>
+          <ExperienceList locale={currentLocale} />
+        </Section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-              {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} locale={currentLocale} />
-              ))}
-            </div>
-          </section>
-        </FadeUp>
+        <Section id="educacao" title={Nav.education}>
+          <EducationList educations={messages.Education} />
+        </Section>
 
-        <FadeUp>
-          <section id="habilidades" className="scroll-m-28">
-            <SkillsSection
-              title={skillsData.title}
-              categories={skillsData.categories}
-            />
-          </section>
-        </FadeUp>
-
-        <FadeUp>
-          <section id="experiencia" className="scroll-m-28">
-            <ExperienceSection
-              experiences={experiences}
-              title={currentLocale === "en" ? "experience" : "experiência"}
-            />
-          </section>
-        </FadeUp>
-
-        <FadeUp>
-          <section id="educacao" className="scroll-m-28">
-            <EducationSection
-              educations={educations}
-              title={currentLocale === "en" ? "education" : "educação"}
-            />
-          </section>
-        </FadeUp>
-
-        <FadeUp>
-          <section id="contato" className="flex flex-col gap-4 pb-8 scroll-m-28">
-            <h2 className="text-2xl font-semibold tracking-tight text-black dark:text-white lowercase">
-              {currentLocale === "en" ? "contact" : "contato"}
-            </h2>
-            <p className="text-[#1F2430]/70 dark:text-white/60 text-sm">
-              {currentLocale === "en"
-                ? "feel free to reach out via email or linkedin."
-                : "fique à vontade para entrar em contato por e-mail ou linkedin."}
-            </p>
-            <div className="flex gap-3 flex-wrap">
-              <a
-                href="mailto:larissa.gondim@academico.ufpb.br"
-                className="px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/40 dark:bg-black/40 backdrop-blur-md text-sm font-medium text-[#1F2430] dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors lowercase"
-              >
-                email
-              </a>
-              <a
-                href="https://linkedin.com/in/larissagondim"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/40 dark:bg-black/40 backdrop-blur-md text-sm font-medium text-[#1F2430] dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors lowercase"
-              >
-                linkedin
-              </a>
-              <a
-                href="https://github.com/larissagondim"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/40 dark:bg-black/40 backdrop-blur-md text-sm font-medium text-[#1F2430] dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors lowercase"
-              >
-                github
-              </a>
-            </div>
-          </section>
-        </FadeUp>
-
-      </div>
-    </main>
+        <Section id="contato" title={Nav.contact}>
+          <p className="text-sm text-muted">{messages.Contact.text}</p>
+          <ul className="flex flex-wrap gap-6 text-sm font-medium">
+            {contacts.map(({ label, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      </main>
+    </>
   );
 }

@@ -16,8 +16,6 @@
         "subtitle": "estudante de ciência da computação e entusiasta de inteligência artificial.",
         "location": "brasil",
         "university": "universidade federal da paraíba - ufpb",
-        "buttonProjects": "ver projetos",
-        "buttonContact": "entrar em contato",
         "tags": {
             "cc": "ciência da computação",
             "ai": "inteligência artificial",
@@ -105,45 +103,6 @@
             "repository": "https://github.com/larissagondim/Beecrowds"
         }
     ],
-    "Experience": [
-        {
-            "id": "trilha-trainee",
-            "role": "aluna",
-            "company": "trilha (projeto de extensão - ufpb)",
-            "period": "jul 2025 - nov 2025",
-            "shortDescription": "capacitação prática e imersão em desenvolvimento de software web/mobile, com foco em boas práticas de programação, arquitetura e versionamento de código.",
-            "achievements": [
-                "colaboração em equipes para o desenvolvimento de aplicação web que armazena informações do pós-operatório de pacientes de algum médico",
-                "aprendizado e aplicação prática de tecnologias front-end, back-end, dados e IA além de ferramentas de controle de versão utilizando Git/GitHub.",
-                "mentorias e conexões que impulsionaram meu desenvolvimento técnico e profissional."
-            ]
-        },
-        {
-            "id": "aria-unimed",
-            "role": "pesquisadora em IA",
-            "company": "aria (aplicações em inteligência artificial) & unimed jp",
-            "period": "out 2025 - momento",
-            "shortDescription": "colaboração no desenvolvimento de soluções computacionais em IA voltadas à digitalização de processos manuscritos no setor de saúde hospitalar.",
-            "achievements": [
-                "desenvolvimento de pipelines de processamento de imagens e OCR para a digitalização de receitas médicas manuscritas.",
-                "pesquisa científica em modelagem de visão-linguagem multimodal aplicada ao reconhecimento de documentos clínicos.",
-                "foco em mitigar falhas humanas de interpretação e otimizar o tempo de resposta no fluxo de triagem hospitalar."
-            ]
-        },
-        {
-            "id": "tail-trainee",
-            "role": "trainee em inteligência artificial",
-            "company": "tail (liga de tecnologia e inteligência artificial - ufpb)",
-            "period": "dez 2025 - momento",
-            "shortDescription": "capacitação em ciência de dados e inteligência artificial por meio de aulas, atividades e projetos práticos.",
-            "achievements": [
-                "realização de notebooks de estudo focados em python, pandas, numpy, scikit-learn, tensorflow e keras",
-                "desenvolvimento do projeto pauta focado em web scraping e extração de dados legislativos de câmaras municipais.",
-                "construção de fluxos de limpeza textual estruturada, tokenização, lematização e modelagem de tópicos.",
-                "utilização de LLMs via groq API e arquitetura de embeddings BERT integrados a autoencoders para sistemas de recomendação."
-            ]
-        }
-    ],
     "Education": [
         {
             "id": "graduation",
@@ -221,5 +180,12 @@
                 ]
             }
         ]
+    },
+    "Labels": {
+        "contributions": "principais contribuições",
+        "code": "ver código"
+    },
+    "Contact": {
+        "text": "fique à vontade para entrar em contato por e-mail ou linkedin."
     }
 }

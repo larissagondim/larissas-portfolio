@@ -1,60 +1,25 @@
-'use client';
+"use client";
 
-import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
+import dynamic from "next/dynamic";
 
 const GitHubCalendar = dynamic(
-    () =>
-        import('react-github-calendar').then((mod) => ({
-            default: mod.GitHubCalendar,
-        })),
-    {
-        ssr: false,
-    }
+  () => import("react-github-calendar").then((mod) => ({ default: mod.GitHubCalendar })),
+  { ssr: false }
 );
 
-type GithubActivityProps = {
-    username?: string;
-};
+const scale = ["#ebedf0", "#bfdbfe", "#60a5fa", "#2563eb", "#1d4ed8"];
 
-const theme = {
-    light: ['#FAF8F3', '#cbf5c2ff', '#97ec82ff', '#4bc935ff', '#42c335ff'],
-    dark: ['#FAF8F3', '#cbf5c2ff', '#97ec82ff', '#4bc935ff', '#42c335ff'],
-};
-
-export default function GithubActivity({
-    username = 'larissagondim',
-}: GithubActivityProps) {
-    return (
-        <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-            className="px-4 pt-4 pb-4 sm:px-10 lg:px-16"
-        >
-            <div className="mx-auto max-w-4xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 150 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 80,
-                        damping: 20,
-                    }}
-                    className="overflow-x-auto rounded-2xl border border-[#E7E4DD] bg-white p-6 shadow-sm"
-                >
-                    <GitHubCalendar
-                        username={username}
-                        colorScheme="light"
-                        theme={theme}
-                        blockSize={11}
-                        blockMargin={3}
-                        fontSize={12}
-                    />
-                </motion.div>
-            </div>
-        </motion.section>
-    );
+export default function GithubActivity({ username = "larissagondim" }: { username?: string }) {
+  return (
+    <div className="overflow-x-auto rounded-box border border-line p-4">
+      <GitHubCalendar
+        username={username}
+        colorScheme="light"
+        theme={{ light: scale, dark: scale }}
+        blockSize={11}
+        blockMargin={3}
+        fontSize={12}
+      />
+    </div>
+  );
 }
