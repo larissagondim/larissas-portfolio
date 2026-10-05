@@ -9,7 +9,7 @@
     },
     "About": {
         "title": "sobre",
-        "description": "sou estudante do terceiro período de ciência da computação na ufpb, com foco em desenvolvimento web full-stack e inteligência artificial. minha atuação técnica une a construção de aplicações em react, next.js e java à aplicação prática de modelos de ocr e processamento de linguagem natural (pln). gosto de resolver questões de programação competitiva no tempo livre, acho divertido quebrar a cabeça com problemas. e para fazer tudo isso, utilizo o linux como meu ecossistema principal. fora do codigo, busco o equilíbrio através do desenho, da música e de jogos da nintendo."
+        "description": "sou estudante do quarto período de ciência da computação na ufpb, com foco em desenvolvimento web full-stack e inteligência artificial. construo aplicações com react, next.js e java e aplico na prática modelos de ocr e processamento de linguagem natural (pln). no tempo livre, resolvo problemas de [programação competitiva](https://github.com/larissagondim/competitiveProgramming) (codeforces, atcoder, beecrowd, codechef), porque gosto de quebrar a cabeça com um bom desafio. uso linux como ambiente principal de trabalho. fora do código, busco equilíbrio no desenho, na música e nos jogos da nintendo."
     },
     "Hero": {
         "title": "larissa gondim",
@@ -111,7 +111,7 @@
             "period": "2025 - 2029 (previsão de conclusão)",
             "shortDescription": "graduação em ciência da computação com foco em inteligência artificial, engenharia de software e resolução de problemas algorítmicos.",
             "achievements": [
-                "cr/gpa: 9,25/10"
+                "cr/gpa: 9,3/10"
             ]
         },
         {
@@ -162,7 +162,7 @@
                 "items": [
                     "Git",
                     "GitHub",
-                    "Linux (Zorin OS/Ubuntu)",
+                    "Linux (Zorin OS/CachyOS)",
                     "Docker",
                     "Supabase",
                     "SQL"

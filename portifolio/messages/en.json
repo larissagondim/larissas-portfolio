@@ -9,7 +9,7 @@
     },
     "About": {
         "title": "about me",
-        "description": "i'm a second year computer science student at ufpb, focusing on full-stack web development and artificial intelligence. my technical work bridges the construction of applications in react, next.js, and java with the practical application of ocr and natural language processing (nlp) models. i enjoy solving competitive programming questions in my free time; i find it fun to rack my brain over problems. to do all this, i use linux as my main ecosystem. outside of code, i seek balance through drawing, music, and nintendo games."
+        "description": "i'm a fourth-semester computer science student at ufpb, focused on full-stack web development and artificial intelligence. i build applications with react, next.js and java, and apply ocr and natural language processing (nlp) models in practice. in my free time, i solve [competitive programming](https://github.com/larissagondim/competitiveProgramming) problems (codeforces, atcoder, beecrowd, codechef) because i enjoy racking my brain over a good challenge. i use linux as my main environment. outside of code, i find balance in drawing, music and nintendo games."
     },
     "Hero": {
         "title": "larissa gondim",
@@ -111,7 +111,7 @@
             "period": "2025 - 2029 (expected completion)",
             "shortDescription": "bachelor's degree in computer science with a focus on artificial intelligence, software engineering, and algorithmic problem-solving.",
             "achievements": [
-                "gpa: 9.25/10"
+                "gpa: 9.3/10"
             ]
         },
         {
@@ -162,7 +162,7 @@
                 "items": [
                     "Git",
                     "GitHub",
-                    "Linux (Zorin OS/Ubuntu)",
+                    "Linux (Zorin OS/CachyOS)",
                     "Docker",
                     "Supabase",
                     "SQL"
