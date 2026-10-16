@@ -155,7 +155,8 @@
                     "TensorFlow",
                     "Keras",
                     "SpaCy",
-                    "Streamlit"
+                    "Streamlit",
+                    "Qwen (VLMs)"
                 ]
             },
             {
@@ -166,7 +167,10 @@
                     "Linux (Zorin OS/CachyOS)",
                     "Docker",
                     "Supabase",
-                    "SQL"
+                    "SQL",
+                    "PostgreSQL (pgvector)",
+                    "PaddleOCR",
+                    "Google Colab"
                 ]
             },
             {
@@ -177,7 +181,16 @@
                     "visão computacional (OCR/VLM)",
                     "programação competitiva",
                     "estruturas de dados",
-                    "sistemas baseados em regras"
+                    "sistemas baseados em regras",
+                    "dados não estruturados",
+                    "extração de dados de documentos"
+                ]
+            },
+            {
+                "name": "idiomas",
+                "items": [
+                    "português (nativo)",
+                    "inglês (fluente)"
                 ]
             }
         ]
