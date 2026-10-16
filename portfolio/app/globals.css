@@ -144,3 +144,80 @@
     translate: 0 14px;
   }
 }
+
+/* Caixas interativas (ver useExpandable). Fora de @layer para prevalecer sobre os utilitários de sombra. */
+.interactive-box {
+  transition:
+    scale var(--duration-base) var(--ease-spring),
+    box-shadow var(--duration-base) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .interactive-box:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+  }
+}
+.interactive-box[data-open] {
+  position: relative;
+  z-index: 1;
+  scale: 1.02;
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+.interactive-box:has(> * :focus-visible, > :focus-visible) {
+  border-color: var(--border-strong);
+}
+.chevron {
+  transition: rotate var(--duration-base) var(--ease-out);
+}
+[aria-expanded="true"] > .chevron {
+  rotate: 180deg;
+}
+
+/* Detalhes recolhíveis: altura animada pela linha do grid. Sem JS, tudo fica aberto. */
+.collapsible {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.collapsible > * {
+  min-height: 0;
+  overflow: hidden;
+}
+@media (scripting: enabled) {
+  .collapsible:not([data-open]) {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+  .collapsible {
+    transition:
+      grid-template-rows var(--duration-base) var(--ease-out),
+      opacity var(--duration-base) var(--ease-out);
+  }
+
+  /* Descrição longa: 2 linhas até expandir; a altura anima onde há interpolate-size. */
+  .clamp-text {
+    interpolate-size: allow-keywords;
+    overflow: hidden;
+    transition: height var(--duration-base) var(--ease-out);
+  }
+  .clamp-text:not([data-clampable]) {
+    max-height: 2lh;
+  }
+  .clamp-text[data-clampable]:not([data-open]) {
+    height: 2lh;
+    mask-image: linear-gradient(to bottom, #000 40%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-box,
+  .chevron,
+  .collapsible,
+  .clamp-text {
+    transition: none;
+  }
+  .interactive-box[data-open] {
+    scale: none;
+  }
+}

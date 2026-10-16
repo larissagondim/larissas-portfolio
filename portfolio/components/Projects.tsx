@@ -1,4 +1,8 @@
-import { FolderGit } from "lucide-react";
+"use client";
+
+import { useId } from "react";
+import { ChevronDown, FolderGit } from "lucide-react";
+import { useExpandable } from "@/components/useExpandable";
 
 interface Project {
   id: string;
@@ -16,8 +20,16 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, labels }: ProjectCardProps) {
+  const { ref, open, toggle, onBoxClick } = useExpandable<HTMLElement>();
+  const panelId = useId();
+
   return (
-    <article className="flex flex-1 flex-col gap-4 rounded-box border border-line bg-surface p-5 shadow-box">
+    <article
+      ref={ref}
+      onClick={onBoxClick}
+      data-open={open || undefined}
+      className="interactive-box flex flex-1 cursor-pointer flex-col gap-4 rounded-box border border-line bg-surface p-5 shadow-box"
+    >
       <div>
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-semibold lowercase">{project.title}</h3>
@@ -28,20 +40,33 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
 
       <p className="text-xs text-muted lowercase">{project.technologies.join(" · ")}</p>
 
-      <details className="text-sm">
-        <summary className="cursor-pointer font-medium">{labels.contributions}</summary>
-        <ul className="mt-2 list-disc space-y-1 pl-4 text-muted">
-          {project.contributionsAndAchievements.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </details>
+      <div className="text-sm">
+        <button
+          type="button"
+          onClick={toggle}
+          aria-expanded={open}
+          aria-controls={panelId}
+          className="inline-flex cursor-pointer items-center gap-1 rounded-sm font-medium transition-colors duration-(--duration-fast) hover:text-accent"
+        >
+          {labels.contributions}
+          <ChevronDown className="chevron size-4" aria-hidden />
+        </button>
+        <div id={panelId} className="collapsible" data-open={open || undefined} inert={!open}>
+          <div>
+            <ul className="mt-2 list-disc space-y-1 pl-4 text-muted">
+              {project.contributionsAndAchievements.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <a
         href={project.repository}
         target="_blank"
         rel="noreferrer"
-        className="mt-auto inline-flex items-center gap-2 text-sm font-medium"
+        className="mt-auto inline-flex items-center gap-2 self-start text-sm font-medium"
       >
         <FolderGit className="size-4" aria-hidden /> {labels.code}
       </a>
