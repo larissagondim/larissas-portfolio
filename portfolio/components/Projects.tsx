@@ -17,7 +17,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, labels }: ProjectCardProps) {
   return (
-    <article className="flex flex-col gap-4 rounded-box border border-line p-5">
+    <article className="flex flex-col gap-4 rounded-box border border-line bg-surface p-5 shadow-box">
       <div>
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-semibold lowercase">{project.title}</h3>

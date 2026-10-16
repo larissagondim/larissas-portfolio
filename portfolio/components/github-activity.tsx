@@ -11,7 +11,7 @@ const scale = [0, 1, 2, 3, 4].map((level) => `var(--calendar-${level})`);
 
 export default function GithubActivity({ username = "larissagondim" }: { username?: string }) {
   return (
-    <div className="overflow-x-auto rounded-box border border-line p-4">
+    <div className="overflow-x-auto rounded-box border border-line bg-surface p-4 shadow-box">
       <GitHubCalendar
         username={username}
         colorScheme="light"
