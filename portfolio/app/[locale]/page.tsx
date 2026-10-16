@@ -51,7 +51,7 @@ export default async function Home({ params }: HomeProps) {
         </div>
 
         <Section id="sobre" title={Nav.about}>
-          <p data-reveal className="leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
+          <p data-reveal className="max-w-[68ch] leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
         </Section>
 
         <Section id="projetos" title={Nav.projects}>

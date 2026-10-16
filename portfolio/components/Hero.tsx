@@ -14,8 +14,8 @@ export default function Hero() {
           className="size-24 shrink-0 rounded-box border border-line"
         />
         <div>
-          <h1 className="text-4xl font-bold">{t("title")}</h1>
-          <p className="mt-2 text-xl text-muted">{t("subtitle")}</p>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("title")}</h1>
+          <p className="mt-2 text-lg leading-snug text-muted sm:text-xl">{t("subtitle")}</p>
         </div>
       </div>
 

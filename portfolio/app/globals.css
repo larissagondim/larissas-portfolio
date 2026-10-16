@@ -108,7 +108,7 @@
   --shadow-box-raised: var(--shadow-md);
   --ease-out: var(--ease-out);
   --ease-spring: var(--ease-spring);
-  --spacing-section: 5rem;
+  --spacing-section: 6rem;
   --spacing-header: 6rem;
 }
 
@@ -121,14 +121,21 @@
       scroll-behavior: smooth;
     }
   }
+  a,
+  button {
+    @apply transition-colors duration-(--duration-fast) ease-out;
+  }
   a {
-    @apply transition-colors duration-(--duration-fast) hover:text-accent;
+    @apply hover:text-accent;
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-accent;
   }
   h2 {
-    @apply text-2xl font-semibold tracking-tight lowercase;
+    @apply text-2xl leading-tight font-semibold tracking-tight lowercase;
+  }
+  h3 {
+    @apply leading-snug;
   }
 }
 
@@ -143,6 +150,24 @@
     opacity: 0;
     translate: 0 14px;
   }
+}
+
+/* Link ativo da navegação: traço fino sob o texto. */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  scale: 0 1;
+  transition: scale var(--duration-base) var(--ease-out);
+}
+.nav-link[aria-current]::after {
+  scale: 1 1;
 }
 
 /* Caixas interativas (ver useExpandable). Fora de @layer para prevalecer sobre os utilitários de sombra. */
@@ -212,6 +237,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .interactive-box,
+  .nav-link::after,
   .chevron,
   .collapsible,
   .clamp-text {
