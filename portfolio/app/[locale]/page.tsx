@@ -12,7 +12,7 @@ import enMessages from "@/messages/en.json";
 
 const contacts = [
   { label: "email", href: "mailto:gondimvilasboaslarissa@gmail.com" },
-  { label: "linkedin", href: "https://linkedin.com/in/larissagondim" },
+  { label: "linkedin", href: "https://www.linkedin.com/in/larissa-vilasboas-gondim-332320374" },
   { label: "github", href: "https://github.com/larissagondim" },
 ];
 
