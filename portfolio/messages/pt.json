@@ -9,11 +9,11 @@
     },
     "About": {
         "title": "sobre",
-        "description": "sou estudante do quarto período de ciência da computação na ufpb, com foco em desenvolvimento web full-stack e inteligência artificial. construo aplicações com react, next.js e java e aplico na prática modelos de ocr e processamento de linguagem natural (pln). no tempo livre, resolvo problemas de [programação competitiva](https://github.com/larissagondim/competitiveProgramming) (codeforces, atcoder, beecrowd, codechef), porque gosto de quebrar a cabeça com um bom desafio. uso linux como ambiente principal de trabalho. fora do código, busco equilíbrio no desenho, na música e nos jogos da nintendo."
+        "description": "sou estudante do quarto período de ciência da computação na ufpb, com foco em inteligência artificial e dados. trabalho transformando documentos não estruturados em dados estruturados, como receitas manuscritas, danfes e textos legislativos, com ocr, modelos visão-linguagem e processamento de linguagem natural (pln). também construo aplicações web com react, next.js e java. no tempo livre, resolvo problemas de [programação competitiva](https://github.com/larissagondim/competitiveProgramming) (codeforces, atcoder, beecrowd, codechef), porque gosto de quebrar a cabeça com um bom desafio. uso linux como ambiente principal de trabalho. fora do código, busco equilíbrio no desenho, na música e nos jogos da nintendo."
     },
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "estudante de ciência da computação e entusiasta de inteligência artificial.",
+        "subtitle": "estudante de ciência da computação com foco em ia e dados.",
         "location": "brasil",
         "university": "universidade federal da paraíba - ufpb",
         "tags": {
@@ -76,7 +76,7 @@
                 "persistência de dados"
             ],
             "contributionsAndAchievements": [
-                "desenvolvimento da interface gráfica nativa utilizando javaFX, aplicando feedback visual reativo para as de tentativas do usuário.",
+                "desenvolvimento da interface gráfica nativa utilizando javaFX, aplicando feedback visual reativo para as tentativas do usuário.",
                 "modelagem de domínio robusta baseada em padrões de projeto e nos princípios de encapsulamento e reaproveitamento do java 21.",
                 "construção de um sistema dinâmico de validação de palavras a partir de um dicionário focado em termos técnicos e palavras do mundo dev.",
                 "implementação de lógica para persistência e leitura de dados locais para manipulação do estado e histórico de progresso do jogador."
@@ -97,9 +97,7 @@
             ],
             "contributionsAndAchievements": [
                 "implementação de soluções otimizadas para diversos desafios algorítmicos englobando vetores, matrizes, strings e lógica matemática.",
-                "foco em eficiência de código, otimização de tempo de execução e limites de memória exigidos por plataformas competitivas.",
-                "estruturação de um repositório limpo e organizado para fácil acompanhamento das resoluções de problemas individuais.",
-                "manutenção de uma rotina contínua de programação para fortalecer a velocidade de resolução e análise algorítmica."
+                "foco em eficiência de código, otimização de tempo de execução e limites de memória exigidos por plataformas competitivas."
             ],
             "repository": "https://github.com/larissagondim/Beecrowds"
         }

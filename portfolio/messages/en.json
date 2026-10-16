@@ -9,11 +9,11 @@
     },
     "About": {
         "title": "about me",
-        "description": "i'm a fourth-semester computer science student at ufpb, focused on full-stack web development and artificial intelligence. i build applications with react, next.js and java, and apply ocr and natural language processing (nlp) models in practice. in my free time, i solve [competitive programming](https://github.com/larissagondim/competitiveProgramming) problems (codeforces, atcoder, beecrowd, codechef) because i enjoy racking my brain over a good challenge. i use linux as my main environment. outside of code, i find balance in drawing, music and nintendo games."
+        "description": "i'm a fourth-semester computer science student at ufpb, focused on artificial intelligence and data. i turn unstructured documents into structured data, such as handwritten prescriptions, danfes (brazilian invoice documents) and legislative texts, using ocr, vision-language models and natural language processing (nlp). i also build web applications with react, next.js and java. in my free time, i solve [competitive programming](https://github.com/larissagondim/competitiveProgramming) problems (codeforces, atcoder, beecrowd, codechef) because i enjoy racking my brain over a good challenge. i use linux as my main environment. outside of code, i find balance in drawing, music and nintendo games."
     },
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "computer science student and artificial intelligence enthusiast.",
+        "subtitle": "computer science student focused on ai and data.",
         "location": "brazil",
         "university": "federal university of paraíba - ufpb",
         "tags": {
@@ -97,9 +97,7 @@
             ],
             "contributionsAndAchievements": [
                 "implemented optimal solutions for diverse algorithmic challenges covering arrays, matrices, strings, and mathematical logic.",
-                "focused on code efficiency, runtime optimization, and memory constraints required by competitive platforms.",
-                "structured a clean and organized repository architecture to easily track individual problem resolutions.",
-                "maintained a continuous daily coding routine to strengthen problem-solving speed and algorithmic analysis."
+                "focused on code efficiency, runtime optimization, and memory constraints required by competitive platforms."
             ],
             "repository": "https://github.com/larissagondim/Beecrowds"
         }
