@@ -22,6 +22,9 @@ interface LocaleLayoutProps {
 
 const locales = ["en", "pt"];
 
+// Aplica o tema salvo antes da primeira pintura, evitando flash de tema errado.
+const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
+
 export default async function RootLayout({
   children,
   params,
@@ -31,7 +34,11 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={currentLocale} className={inter.variable}>
+    // suppressHydrationWarning: o script abaixo define data-theme antes da hidratação.
+    <html lang={currentLocale} className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -5,7 +5,8 @@
         "skills": "habilidades",
         "experience": "experiência",
         "education": "educação",
-        "contact": "contato"
+        "contact": "contato",
+        "theme": "alternar tema claro/escuro"
     },
     "About": {
         "title": "sobre",

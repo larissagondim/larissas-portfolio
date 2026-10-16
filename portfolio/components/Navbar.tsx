@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { key: "about", href: "#sobre" },
@@ -38,13 +39,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          type="button"
-          onClick={() => router.replace(pathname, { locale: locale === "pt" ? "en" : "pt" })}
-          className="cursor-pointer text-sm font-medium lowercase hover:text-accent"
-        >
-          {locale === "pt" ? "en" : "pt"}
-        </button>
+        <div className="flex items-center gap-3">
+          <ThemeToggle label={t("theme")} />
+          <button
+            type="button"
+            onClick={() => router.replace(pathname, { locale: locale === "pt" ? "en" : "pt" })}
+            className="cursor-pointer text-sm font-medium lowercase hover:text-accent"
+          >
+            {locale === "pt" ? "en" : "pt"}
+          </button>
+        </div>
       </nav>
     </header>
   );
