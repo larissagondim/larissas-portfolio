@@ -1,13 +1,49 @@
 @import "tailwindcss";
 
-@theme {
-  --color-bg: #faf8f3;
-  --color-fg: #1f2430;
-  --color-muted: #5b6270;
-  --color-line: #e7e4dd;
-  --color-accent: #1d4ed8;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+/* Tokens de design. Componentes usam só as classes semânticas mapeadas no @theme abaixo. */
+:root {
+  --bg: #faf8f3;
+  --surface: #fdfcf9;
+  --surface-2: #f3f0e9;
+  --text: #1f2430;
+  --text-muted: #5b6270;
+  --border: #e7e4dd;
+  --border-strong: #cfcbc2;
+  --accent: #1d4ed8;
+  --accent-contrast: #faf8f3;
+
+  /* escala do calendário do github, do nível 0 ao 4 */
+  --calendar-0: #ebedf0;
+  --calendar-1: #bfdbfe;
+  --calendar-2: #60a5fa;
+  --calendar-3: #2563eb;
+  --calendar-4: #1d4ed8;
+
   --radius-box: 0.5rem;
+
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-reveal: 500ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-contrast: var(--accent-contrast);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --radius-box: var(--radius-box);
+  --ease-out: var(--ease-out);
+  --ease-spring: var(--ease-spring);
+  --spacing-section: 5rem;
+  --spacing-header: 6rem;
 }
 
 @layer base {
@@ -20,7 +56,7 @@
     }
   }
   a {
-    @apply transition-colors hover:text-accent;
+    @apply transition-colors duration-(--duration-fast) hover:text-accent;
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-accent;

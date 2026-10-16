@@ -7,7 +7,7 @@ const GitHubCalendar = dynamic(
   { ssr: false }
 );
 
-const scale = ["#ebedf0", "#bfdbfe", "#60a5fa", "#2563eb", "#1d4ed8"];
+const scale = [0, 1, 2, 3, 4].map((level) => `var(--calendar-${level})`);
 
 export default function GithubActivity({ username = "larissagondim" }: { username?: string }) {
   return (

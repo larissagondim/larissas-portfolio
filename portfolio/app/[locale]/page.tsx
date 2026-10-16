@@ -43,7 +43,7 @@ export default async function Home({ params }: HomeProps) {
   return (
     <>
       <Navbar />
-      <main className="mx-auto flex max-w-4xl flex-col gap-20 px-4 pb-24 pt-28">
+      <main className="mx-auto flex max-w-4xl flex-col gap-section px-4 pb-24 pt-28">
         <Hero />
         <GithubActivity />
 
