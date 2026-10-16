@@ -29,8 +29,8 @@ export const experiences: Experience[] = [
         title: { pt: "pesquisadora em nlp", en: "nlp researcher" },
         start: "2026-08",
         description: {
-          pt: "pesquisa em armazenamento e estruturação do conteúdo de danfes em html com modelos de visão e linguagem (vlms).",
-          en: "research on storing and structuring DANFE content as html using vision-language models (vlms).",
+          pt: "pipeline que converte danfes em html estruturado com paddleocr e qwen (via openrouter): em 5 notas de 300 dpi, 4 passaram na conferência de código, quantidade, preço e total dos produtos. script de validação contra gabarito de dataset sintético e testes automatizados de reconstrução de células e preservação de valores; comparação de 3 entradas para o llm (json compacto, json completo e markdown), gerando 15 versões de html. execução no google colab com métricas de tempo, cpu, ram e tokens por etapa (em 1 nota: 131 s de ocr, 30 s de html, custo us$ 0).",
+          en: "pipeline that converts danfes (brazilian invoice documents) into structured html with paddleocr and qwen (via openrouter): out of 5 invoices at 300 dpi, 4 passed the check of product code, quantity, price and total. validation script against a synthetic dataset's ground truth and automated tests for cell reconstruction and value preservation; compared 3 llm inputs (compact json, full json and markdown), producing 15 html versions. runs on google colab with per-stage time, cpu, ram and token metrics (on 1 invoice: 131 s of ocr, 30 s of html, us$ 0 cost).",
         },
       },
       {
@@ -38,8 +38,8 @@ export const experiences: Experience[] = [
         start: "2025-12",
         end: "2026-07",
         description: {
-          pt: "trilha de ciência de dados e ia; projeto pauta com web scraping, nlp, embeddings bert e autoencoders.",
-          en: "data science and ai track; pauta project with web scraping, nlp, bert embeddings and autoencoders.",
+          pt: "trilha de ciência de dados e ia; no projeto pauta, sistema de recomendação de candidatos (embeddings bert + autoencoder), web scraping e nlp.",
+          en: "data science and ai track; on the pauta project, candidate recommendation system (bert embeddings + autoencoder), web scraping and nlp.",
         },
       },
     ],
@@ -55,25 +55,26 @@ export const experiences: Experience[] = [
         title: { pt: "pesquisadora em visão computacional", en: "computer vision researcher" },
         start: "2026-10",
         description: {
-          pt: "pesquisa em visão computacional aplicada à partidas de goalball.",
-          en: "computer vision research applied to goalball matches.",
+          pt: "anotação (rotulagem) de vídeos de partidas de goalball, produzindo dados rotulados para pesquisa em visão computacional.",
+          en: "annotation (labeling) of goalball match videos, producing labeled data for computer vision research.",
         },
       },
       {
         title: { pt: "desenvolvedora front-end · sefaz", en: "front-end developer · sefaz" },
         start: "2026-07",
         description: {
-          pt: "desenvolvimento de interfaces web front-end na sefaz.",
-          en: "front-end web interface development at sefaz.",
+          pt: "desenvolvimento de interfaces web front-end na sefaz, com ambiente de desenvolvimento em containers docker.",
+          en: "front-end web interface development at sefaz, with the development environment running in docker containers.",
         },
       },
       {
         title: { pt: "pesquisadora em ia", en: "ai researcher" },
         start: "2025-10",
         end: "2026-04",
+        // TODO: completar o resultado (número de receitas processadas / acurácia) quando houver o dado.
         description: {
-          pt: "pipelines de imagem e ocr e pesquisa em modelos visão-linguagem para digitalizar receitas manuscritas (unimed jp).",
-          en: "image and ocr pipelines and vision-language research to digitize handwritten prescriptions (unimed jp).",
+          pt: "receitas manuscritas da unimed jp precisavam ser digitalizadas; construí pipelines de imagem e ocr e comparei modelos visão-linguagem (vlms) como alternativa ao ocr tradicional em manuscritos.",
+          en: "handwritten prescriptions at unimed jp needed to be digitized; built image and ocr pipelines and compared vision-language models (vlms) as an alternative to traditional ocr on handwriting.",
         },
       },
     ],
