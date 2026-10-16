@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/Projects";
 import { ExperienceList } from "@/components/Experience";
 import { EducationList } from "@/components/Education";
 import { SkillsList } from "@/components/Skills";
+import RevealObserver from "@/components/RevealObserver";
 
 import ptMessages from "@/messages/pt.json";
 import enMessages from "@/messages/en.json";
@@ -45,16 +46,20 @@ export default async function Home({ params }: HomeProps) {
       <Navbar />
       <main className="mx-auto flex max-w-4xl flex-col gap-section px-4 pb-24 pt-28">
         <Hero />
-        <GithubActivity />
+        <div data-reveal>
+          <GithubActivity />
+        </div>
 
         <Section id="sobre" title={Nav.about}>
-          <p className="leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
+          <p data-reveal className="leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
         </Section>
 
         <Section id="projetos" title={Nav.projects}>
           <div className="grid items-stretch gap-6 md:grid-cols-2">
             {messages.Projects.map((project) => (
-              <ProjectCard key={project.id} project={project} labels={messages.Labels} />
+              <div key={project.id} data-reveal className="flex">
+                <ProjectCard project={project} labels={messages.Labels} />
+              </div>
             ))}
           </div>
         </Section>
@@ -72,8 +77,8 @@ export default async function Home({ params }: HomeProps) {
         </Section>
 
         <Section id="contato" title={Nav.contact}>
-          <p className="text-sm text-muted">{messages.Contact.text}</p>
-          <ul className="flex flex-wrap gap-6 text-sm font-medium">
+          <p data-reveal className="text-sm text-muted">{messages.Contact.text}</p>
+          <ul data-reveal className="flex flex-wrap gap-6 text-sm font-medium">
             {contacts.map(({ label, href }) => (
               <li key={label}>
                 <a
@@ -87,6 +92,7 @@ export default async function Home({ params }: HomeProps) {
           </ul>
         </Section>
       </main>
+      <RevealObserver />
     </>
   );
 }

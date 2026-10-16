@@ -4,7 +4,7 @@ export function ExperienceList({ locale }: { locale: "pt" | "en" }) {
   return (
     <ol className="flex flex-col gap-10">
       {sortedExperiences.map((exp) => (
-        <li key={exp.id}>
+        <li key={exp.id} data-reveal>
           <h3 className="text-sm text-muted lowercase">{exp.organization[locale]}</h3>
           <ol className="mt-4 flex flex-col gap-5 border-l border-line pl-5">
             {exp.roles.map((role) => (
