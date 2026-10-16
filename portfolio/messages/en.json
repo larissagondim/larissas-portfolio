@@ -26,21 +26,22 @@
     "Projects": [
         {
             "id": "pauta",
-            "title": "pauta – intelligent legislative analysis system",
-            "status": "completed",
-            "shortDescription": "an AI and NLP platform designed to process municipal legislative data, generating automated summaries and semantic mapping for candidate recommendations.",
+            "title": "pauta – municipal political participation platform",
+            "status": "in progress",
+            "shortDescription": "a municipal political participation platform: citizens report urban problems with a photo and location, a vision LLM classifies the category and the problem becomes a point on the map; the system also recommends candidates by affinity of political agendas. project stack: next.js, react, typescript, fastapi, python, postgres with postgis and pgvector, supabase and celery.",
             "technologies": [
                 "python",
-                "NLP (SpaCy/NLTK)",
-                "BERT embeddings",
-                "autoencoders",
-                "groq API (LLMs)",
-                "web scraping"
+                "postgresql (pgvector)",
+                "BERT",
+                "SpaCy",
+                "NLTK",
+                "groq API"
             ],
             "contributionsAndAchievements": [
+                "built the candidate recommendation system: semantic representation with BERT embeddings + an autoencoder and cosine similarity search on pgvector.",
+                "collected municipal legislative data via web scraping.",
                 "architected the NLP preprocessing workflow, including text cleaning, tokenization, lemmatization, and stopword filtering.",
-                "integrated the groq API for intelligent, automated summarization of complex political proposals.",
-                "implemented semantic representation modeling by combining BERT embeddings and an autoencoder to refine the recommendation engine."
+                "integrated the groq API for intelligent, automated summarization of complex political proposals."
             ],
             "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
         },

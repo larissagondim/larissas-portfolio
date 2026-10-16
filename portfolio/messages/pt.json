@@ -26,21 +26,22 @@
     "Projects": [
         {
             "id": "pauta",
-            "title": "pauta – sistema inteligente de análise legislativa",
-            "status": "completed",
-            "shortDescription": "plataforma de NLP e IA para processamento de dados legislativos municipais, gerando resumos automatizados e mapeamento semântico para recomendação de candidatos.",
+            "title": "pauta – plataforma de participação política municipal",
+            "status": "in progress",
+            "shortDescription": "plataforma de participação política municipal: o cidadão reporta problemas urbanos com foto e localização, uma LLM de visão classifica a categoria e o problema vira um ponto no mapa; o sistema também recomenda candidatos por afinidade de pautas. stack do projeto: next.js, react, typescript, fastapi, python, postgres com postgis e pgvector, supabase e celery.",
             "technologies": [
                 "python",
-                "NLP (SpaCy/NLTK)",
-                "BERT embeddings",
-                "autoencoders",
-                "groq API (LLMs)",
-                "web scraping"
+                "postgresql (pgvector)",
+                "BERT",
+                "SpaCy",
+                "NLTK",
+                "groq API"
             ],
             "contributionsAndAchievements": [
+                "desenvolvimento do sistema de recomendação de candidatos: representação semântica com embeddings BERT + autoencoder e busca por similaridade de cosseno sobre o pgvector.",
+                "coleta de dados legislativos municipais por web scraping.",
                 "arquitetura do fluxo de pré-processamento de NLP, incluindo limpeza de texto, tokenização, lematização e filtragem de stopwords.",
-                "integração da API da groq para a sumarização automatizada e inteligente de propostas políticas complexas.",
-                "implementação da modelagem de representação semântica combinando embeddings BERT e autoencoder para refinar o motor de recomendação."
+                "integração da API da groq para a sumarização automatizada e inteligente de propostas políticas complexas."
             ],
             "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
         },
