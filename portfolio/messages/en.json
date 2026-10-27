@@ -10,11 +10,11 @@
     },
     "About": {
         "title": "about me",
-        "description": "i'm a fourth-semester computer science student at ufpb, focused on artificial intelligence and data. i turn unstructured documents into structured data, such as handwritten prescriptions, danfes (brazilian invoice documents) and legislative texts, using ocr, vision-language models and natural language processing (nlp). i also build web applications with react, next.js and java. in my free time, i solve [competitive programming](https://github.com/larissagondim/competitiveProgramming) problems (codeforces, atcoder, beecrowd, codechef) because i enjoy racking my brain over a good challenge. i use linux as my main environment. outside of code, i find balance in drawing, music and nintendo games."
+        "description": "i'm a fourth-semester computer science student at ufpb, focused on artificial intelligence, data and software development. i build pipelines that turn unstructured documents, such as handwritten prescriptions, danfes (brazilian invoice documents) and legislative texts, into structured data, using ocr, vision-language models and natural language processing (nlp), and i develop web applications with react, next.js and java. in my free time, i solve [competitive programming](https://github.com/larissagondim/competitiveProgramming) problems (codeforces, atcoder, beecrowd, codechef) because i enjoy racking my brain over a good challenge. i use linux as my main environment. outside of code, i find balance in drawing, music and nintendo games."
     },
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "computer science student focused on ai and data.",
+        "subtitle": "computer science student focused on ai and software development.",
         "location": "brazil",
         "university": "federal university of paraíba - ufpb",
         "tags": {
@@ -32,17 +32,16 @@
             "shortDescription": "a municipal political participation platform: citizens report urban problems with a photo and location, a vision LLM classifies the category and the problem becomes a point on the map; the system also recommends candidates by affinity of political agendas. project stack: next.js, react, typescript, fastapi, python, postgres with postgis and pgvector, supabase and celery.",
             "technologies": [
                 "python",
-                "postgresql (pgvector)",
-                "BERT",
                 "SpaCy",
-                "NLTK",
+                "BERT",
+                "pytorch",
                 "groq API"
             ],
             "contributionsAndAchievements": [
-                "built the candidate recommendation system: semantic representation with BERT embeddings + an autoencoder and cosine similarity search on pgvector.",
-                "collected municipal legislative data via web scraping.",
-                "architected the NLP preprocessing workflow, including text cleaning, tokenization, lemmatization, and stopword filtering.",
-                "integrated the groq API for intelligent, automated summarization of complex political proposals."
+                "preprocessed 2,103 legislative proposals from 97 city councilors in 5 municipalities of paraíba (sapl data): null handling and separation between interface data and NLP data.",
+                "tokenization, stopword removal and lemmatization with SpaCy and NLTK, with custom stopwords for legislative jargon.",
+                "plain-language summaries of the 2,103 proposals with llama 3.1 via groq, shown to citizens.",
+                "foundation of the recommendation system: councilor embeddings with portuguese BERT and an autoencoder (768 to 64 dimensions) in pytorch, with training and validation notebooks."
             ],
             "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
         },
@@ -153,6 +152,7 @@
                     "scikit-learn",
                     "TensorFlow",
                     "Keras",
+                    "PyTorch",
                     "SpaCy",
                     "Streamlit",
                     "Qwen (VLMs)"
@@ -167,7 +167,6 @@
                     "Docker",
                     "Supabase",
                     "SQL",
-                    "PostgreSQL (pgvector)",
                     "PaddleOCR",
                     "Google Colab"
                 ]

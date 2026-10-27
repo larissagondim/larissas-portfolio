@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Larissa Gondim",
   description:
-    "Portfólio de Larissa Gondim — estudante de Ciência da Computação com foco em IA e dados.",
+    "Portfólio de Larissa Gondim — estudante de Ciência da Computação com foco em IA e desenvolvimento de software.",
 };
 
 interface LocaleLayoutProps {

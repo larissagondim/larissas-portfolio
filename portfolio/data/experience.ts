@@ -29,8 +29,8 @@ export const experiences: Experience[] = [
         title: { pt: "pesquisadora em nlp", en: "nlp researcher" },
         start: "2026-08",
         description: {
-          pt: "pipeline que converte danfes em html estruturado com paddleocr e qwen (via openrouter): em 5 notas de 300 dpi, 4 passaram na conferência de código, quantidade, preço e total dos produtos. script de validação contra gabarito de dataset sintético e testes automatizados de reconstrução de células e preservação de valores; comparação de 3 entradas para o llm (json compacto, json completo e markdown), gerando 15 versões de html. execução no google colab com métricas de tempo, cpu, ram e tokens por etapa (em 1 nota: 131 s de ocr, 30 s de html, custo us$ 0).",
-          en: "pipeline that converts danfes (brazilian invoice documents) into structured html with paddleocr and qwen (via openrouter): out of 5 invoices at 300 dpi, 4 passed the check of product code, quantity, price and total. validation script against a synthetic dataset's ground truth and automated tests for cell reconstruction and value preservation; compared 3 llm inputs (compact json, full json and markdown), producing 15 html versions. runs on google colab with per-stage time, cpu, ram and token metrics (on 1 invoice: 131 s of ocr, 30 s of html, us$ 0 cost).",
+          pt: "pipeline que converte danfes em html estruturado com paddleocr e qwen (via api do openrouter): em 5 notas de 300 dpi, 4 passaram na conferência de código, quantidade, preço e total dos produtos. validação contra gabarito de dataset sintético e testes automatizados de reconstrução de células e preservação de valores; comparação de 3 entradas para o llm (json compacto, json completo e markdown), gerando 15 versões de html. execução no google colab com métricas por etapa (em 1 nota: 131 s de ocr, 30 s de html e custo us$ 0).",
+          en: "pipeline that converts danfes (brazilian invoice documents) into structured html with paddleocr and qwen (via the openrouter api): out of 5 invoices at 300 dpi, 4 passed the check of product code, quantity, price and total. validation against a synthetic dataset's ground truth and automated tests for cell reconstruction and value preservation; compared 3 llm inputs (compact json, full json and markdown), producing 15 html versions. runs on google colab with per-stage metrics (on 1 invoice: 131 s of ocr, 30 s of html and us$ 0 cost).",
         },
       },
       {
@@ -38,8 +38,8 @@ export const experiences: Experience[] = [
         start: "2025-12",
         end: "2026-07",
         description: {
-          pt: "trilha de ciência de dados e ia; no projeto pauta, sistema de recomendação de candidatos (embeddings bert + autoencoder), web scraping e nlp.",
-          en: "data science and ai track; on the pauta project, candidate recommendation system (bert embeddings + autoencoder), web scraping and nlp.",
+          pt: "trilha de ciência de dados e ia, aplicada no projeto pauta.",
+          en: "data science and ai track, applied to the pauta project.",
         },
       },
     ],
@@ -54,9 +54,10 @@ export const experiences: Experience[] = [
       {
         title: { pt: "pesquisadora em visão computacional", en: "computer vision researcher" },
         start: "2026-10",
+        // TODO: acrescentar atividades e resultados à medida que forem informados.
         description: {
-          pt: "anotação (rotulagem) de vídeos de partidas de goalball, produzindo dados rotulados para pesquisa em visão computacional.",
-          en: "annotation (labeling) of goalball match videos, producing labeled data for computer vision research.",
+          pt: "pesquisa em visão computacional com vídeos de partidas de goalball; o trabalho inclui a anotação (rotulagem) dos dados e o benchmarking do modelo anotador (tracknet v1), com o yolo como referência de comparação.",
+          en: "computer vision research with goalball match videos; the work includes data annotation (labeling) and benchmarking the annotator model (tracknet v1), with yolo as the comparison baseline.",
         },
       },
       {
@@ -71,10 +72,10 @@ export const experiences: Experience[] = [
         title: { pt: "pesquisadora em ia", en: "ai researcher" },
         start: "2025-10",
         end: "2026-04",
-        // TODO: completar o resultado (número de receitas processadas / acurácia) quando houver o dado.
+        // TODO: completar o resultado (número de receitas processadas e/ou acurácia) quando houver o dado.
         description: {
-          pt: "receitas manuscritas da unimed jp precisavam ser digitalizadas; construí pipelines de imagem e ocr e comparei modelos visão-linguagem (vlms) como alternativa ao ocr tradicional em manuscritos.",
-          en: "handwritten prescriptions at unimed jp needed to be digitized; built image and ocr pipelines and compared vision-language models (vlms) as an alternative to traditional ocr on handwriting.",
+          pt: "receitas manuscritas da unimed jp precisavam ser digitalizadas; construí um pipeline de imagem e ocr e comparei modelos visão-linguagem (vlms) como alternativa ao ocr tradicional em manuscritos.",
+          en: "handwritten prescriptions at unimed jp needed to be digitized; built an image and ocr pipeline and compared vision-language models (vlms) as an alternative to traditional ocr on handwriting.",
         },
       },
     ],

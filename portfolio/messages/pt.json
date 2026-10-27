@@ -10,11 +10,11 @@
     },
     "About": {
         "title": "sobre",
-        "description": "sou estudante do quarto período de ciência da computação na ufpb, com foco em inteligência artificial e dados. trabalho transformando documentos não estruturados em dados estruturados, como receitas manuscritas, danfes e textos legislativos, com ocr, modelos visão-linguagem e processamento de linguagem natural (pln). também construo aplicações web com react, next.js e java. no tempo livre, resolvo problemas de [programação competitiva](https://github.com/larissagondim/competitiveProgramming) (codeforces, atcoder, beecrowd, codechef), porque gosto de quebrar a cabeça com um bom desafio. uso linux como ambiente principal de trabalho. fora do código, busco equilíbrio no desenho, na música e nos jogos da nintendo."
+        "description": "sou estudante do quarto período de ciência da computação na ufpb, com foco em inteligência artificial, dados e desenvolvimento de software. construo pipelines que transformam documentos não estruturados (receitas manuscritas, danfes, textos legislativos) em dados estruturados, com ocr, modelos visão-linguagem e processamento de linguagem natural (pln), e desenvolvo aplicações web com react, next.js e java. no tempo livre, resolvo problemas de [programação competitiva](https://github.com/larissagondim/competitiveProgramming) (codeforces, atcoder, beecrowd, codechef), porque gosto de quebrar a cabeça com um bom desafio. uso linux como ambiente principal de trabalho. fora do código, busco equilíbrio no desenho, na música e nos jogos da nintendo."
     },
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "estudante de ciência da computação com foco em ia e dados.",
+        "subtitle": "estudante de ciência da computação com foco em ia e desenvolvimento de software.",
         "location": "brasil",
         "university": "universidade federal da paraíba - ufpb",
         "tags": {
@@ -32,17 +32,16 @@
             "shortDescription": "plataforma de participação política municipal: o cidadão reporta problemas urbanos com foto e localização, uma LLM de visão classifica a categoria e o problema vira um ponto no mapa; o sistema também recomenda candidatos por afinidade de pautas. stack do projeto: next.js, react, typescript, fastapi, python, postgres com postgis e pgvector, supabase e celery.",
             "technologies": [
                 "python",
-                "postgresql (pgvector)",
-                "BERT",
                 "SpaCy",
-                "NLTK",
+                "BERT",
+                "pytorch",
                 "groq API"
             ],
             "contributionsAndAchievements": [
-                "desenvolvimento do sistema de recomendação de candidatos: representação semântica com embeddings BERT + autoencoder e busca por similaridade de cosseno sobre o pgvector.",
-                "coleta de dados legislativos municipais por web scraping.",
-                "arquitetura do fluxo de pré-processamento de NLP, incluindo limpeza de texto, tokenização, lematização e filtragem de stopwords.",
-                "integração da API da groq para a sumarização automatizada e inteligente de propostas políticas complexas."
+                "pré-processamento de 2.103 propostas legislativas de 97 vereadores de 5 municípios paraibanos (dados do sapl): tratamento de nulos e separação entre dados de interface e de NLP.",
+                "tokenização, remoção de stopwords e lematização com SpaCy e NLTK, com stopwords customizadas para o jargão legislativo.",
+                "resumos em linguagem simples das 2.103 propostas com llama 3.1 pela groq, exibidos ao cidadão.",
+                "base do sistema de recomendação: embeddings dos vereadores com BERT em português e autoencoder (768 para 64 dimensões) em pytorch, com notebooks de treino e validação."
             ],
             "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
         },
@@ -153,6 +152,7 @@
                     "scikit-learn",
                     "TensorFlow",
                     "Keras",
+                    "PyTorch",
                     "SpaCy",
                     "Streamlit",
                     "Qwen (VLMs)"
@@ -167,7 +167,6 @@
                     "Docker",
                     "Supabase",
                     "SQL",
-                    "PostgreSQL (pgvector)",
                     "PaddleOCR",
                     "Google Colab"
                 ]
