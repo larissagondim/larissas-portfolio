@@ -65,27 +65,29 @@
             "repository": "https://github.com/larissagondim/poke-c.git"
         },
         {
-            "id": "java-tech-wordle",
-            "title": "java tech wordle (termo-java)",
+            "id": "pokedex-game",
+            "title": "pokédex game",
             "status": "in progress",
-            "shortDescription": "a customized adaptation of the wordle/termo game themed around the tech universe, built with solid OOP principles and a native desktop graphical interface.",
+            "shortDescription": "an interactive 3D pokédex with battles, machine-learning win prediction and a tamagotchi, covering all 1,025 pokémon.",
             "technologies": [
-                "java 21",
-                "javaFX",
-                "object-oriented programming",
-                "data persistence"
+                "typescript",
+                "next.js",
+                "react three fiber",
+                "python",
+                "scikit-learn",
+                "fastAPI"
             ],
             "contributionsAndAchievements": [
-                "developed a native graphical user interface using javaFX, implementing reactive visual feedback for user guesses.",
-                "architected a robust domain model leveraging design patterns and java 21 encapsulation and reusability features.",
-                "built a dynamic word validation system backed by a custom dictionary focused on technical terms and developer culture.",
-                "implemented local data reading and persistence logic to manage game states and track player progress history."
+                "built a procedural 3D pokédex device with react three fiber, including pressable buttons, sound, gamepad support and a phone layout.",
+                "wrote a typescript battle engine from scratch supporting 1v1, 3v3 and 6v6 formats with move, item and switch menus.",
+                "trained a machine-learning win predictor that runs in the browser and shows a pre-battle win chance plus a live monte carlo estimate.",
+                "developed python scrapers to collect data, sprites and artwork for all 1,025 pokémon, and a tamagotchi mode with needs, xp, evolution and egg hatching."
             ],
-            "repository": "https://github.com/larissagondim/java-tech-wordle.git"
+            "repository": "https://github.com/larissagondim/pokedex-game"
         },
         {
             "id": "beecrowd",
-            "title": "beecrowd solutions",
+            "title": "competitive programming",
             "status": "completed",
             "shortDescription": "a collection of competitive programming and algorithmic problems solved in c, c++, and python, tracking continuous learning in logic and data structures.",
             "technologies": [
