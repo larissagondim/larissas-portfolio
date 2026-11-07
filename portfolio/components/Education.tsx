@@ -13,7 +13,7 @@ export function EducationList({ educations }: { educations: EducationItem[] }) {
       {educations.map((edu) => (
         <li key={edu.id} data-reveal>
           <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-            <p className="font-medium lowercase">{edu.institution}</p>
+            <p className="font-bold lowercase">{edu.institution}</p>
             <p className="text-xs text-muted">{edu.period}</p>
           </div>
           <p className="text-sm lowercase">{edu.degree}</p>

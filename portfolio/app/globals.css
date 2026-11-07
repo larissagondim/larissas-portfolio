@@ -14,24 +14,25 @@
 
 /* Tokens de design. Componentes usam só as classes semânticas mapeadas no @theme abaixo. */
 :root {
-  --bg: #faf8f3;
-  --surface: #fdfcf9;
-  --surface-2: #f3f0e9;
-  --text: #1f2430;
-  --text-muted: #5b6270;
-  --border: #e7e4dd;
-  --border-strong: #cfcbc2;
-  --accent: #1d4ed8;
-  --accent-contrast: #faf8f3;
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-2: #ebebeb;
+  --text: #1a1a1a;
+  --text-muted: #5c5c5c;
+  --border: #dcdcdc;
+  --border-strong: #b9b9b9;
+  --accent: #d42b1e;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgb(212 43 30 / 0.07);
 
   /* escala do calendário do github, do nível 0 ao 4 */
-  --calendar-0: #ebedf0;
-  --calendar-1: #bfdbfe;
-  --calendar-2: #60a5fa;
-  --calendar-3: #2563eb;
-  --calendar-4: #1d4ed8;
+  --calendar-0: #e6e6e6;
+  --calendar-1: #f6c4be;
+  --calendar-2: #ee8c82;
+  --calendar-3: #e0544a;
+  --calendar-4: #c0261a;
 
-  --radius-box: 0.5rem;
+  --radius-box: 0.375rem;
 
   --duration-fast: 150ms;
   --duration-base: 220ms;
@@ -40,28 +41,29 @@
   --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
 
   /* sombras: reforço leve sobre a borda de 1px; quase nulas no escuro */
-  --shadow-sm: 0 1px 2px rgb(31 36 48 / 0.04), 0 1px 3px rgb(31 36 48 / 0.05);
+  --shadow-sm: 0 0 0 transparent;
   --shadow-md: 0 2px 4px rgb(31 36 48 / 0.05), 0 6px 16px rgb(31 36 48 / 0.08);
 
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --bg: #15171c;
-  --surface: #1b1e24;
-  --surface-2: #22262e;
-  --text: #e8e6e1;
-  --text-muted: #a3a9b4;
-  --border: #2c3039;
-  --border-strong: #444a55;
-  --accent: #8fb0ff;
-  --accent-contrast: #15171c;
+  --bg: #181818;
+  --surface: #202020;
+  --surface-2: #2a2a2a;
+  --text: #f2f2f2;
+  --text-muted: #a3a3a3;
+  --border: #333333;
+  --border-strong: #4d4d4d;
+  --accent: #ff5d4f;
+  --accent-contrast: #181818;
+  --accent-soft: rgb(255 93 79 / 0.1);
 
-  --calendar-0: #262a33;
-  --calendar-1: #1e3a8a;
-  --calendar-2: #1d4ed8;
-  --calendar-3: #3b82f6;
-  --calendar-4: #93c5fd;
+  --calendar-0: #2a2a2a;
+  --calendar-1: #5a2622;
+  --calendar-2: #8f372f;
+  --calendar-3: #d4483c;
+  --calendar-4: #ff7d70;
 
   --shadow-sm: 0 0 0 transparent;
   --shadow-md: 0 2px 6px rgb(0 0 0 / 0.18);
@@ -70,21 +72,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #15171c;
-    --surface: #1b1e24;
-    --surface-2: #22262e;
-    --text: #e8e6e1;
-    --text-muted: #a3a9b4;
-    --border: #2c3039;
-    --border-strong: #444a55;
-    --accent: #8fb0ff;
-    --accent-contrast: #15171c;
-
-    --calendar-0: #262a33;
-    --calendar-1: #1e3a8a;
-    --calendar-2: #1d4ed8;
-    --calendar-3: #3b82f6;
-    --calendar-4: #93c5fd;
+    --bg: #181818;
+    --surface: #202020;
+    --surface-2: #2a2a2a;
+    --text: #f2f2f2;
+    --text-muted: #a3a3a3;
+    --border: #333333;
+    --border-strong: #4d4d4d;
+    --accent: #ff5d4f;
+    --accent-contrast: #181818;
+    --accent-soft: rgb(255 93 79 / 0.1);
+  
+    --calendar-0: #2a2a2a;
+    --calendar-1: #5a2622;
+    --calendar-2: #8f372f;
+    --calendar-3: #d4483c;
+    --calendar-4: #ff7d70;
 
     --shadow-sm: 0 0 0 transparent;
     --shadow-md: 0 2px 6px rgb(0 0 0 / 0.18);
@@ -102,7 +105,8 @@
   --color-line-strong: var(--border-strong);
   --color-accent: var(--accent);
   --color-accent-contrast: var(--accent-contrast);
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
   --radius-box: var(--radius-box);
   --shadow-box: var(--shadow-sm);
   --shadow-box-raised: var(--shadow-md);
@@ -131,8 +135,11 @@
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-accent;
   }
+  h1 {
+    font-stretch: 125%;
+  }
   h2 {
-    @apply text-2xl leading-tight font-semibold tracking-tight lowercase;
+    @apply text-lg leading-tight font-bold tracking-tight lowercase;
   }
   h3 {
     @apply leading-snug;
@@ -152,6 +159,39 @@
   }
 }
 
+/* Entrada do hero: sequência única ao carregar. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 700ms var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      translate: 0 18px;
+    }
+  }
+  /* nome: cada linha sobe de dentro de uma máscara */
+  .line-in {
+    animation: line-in 900ms var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 130ms + 100ms);
+  }
+  @keyframes line-in {
+    from {
+      translate: 0 105%;
+    }
+  }
+  .draw-rule {
+    transform-origin: left;
+    animation: draw 700ms var(--ease-out) both;
+  }
+  @keyframes draw {
+    from {
+      scale: 0 1;
+    }
+  }
+}
+
 /* Link ativo da navegação: traço fino sob o texto. */
 .nav-link {
   position: relative;
@@ -161,8 +201,8 @@
   position: absolute;
   inset-inline: 0;
   bottom: -4px;
-  height: 1px;
-  background: currentColor;
+  height: 2px;
+  background: var(--accent);
   scale: 0 1;
   transition: scale var(--duration-base) var(--ease-out);
 }
@@ -180,7 +220,7 @@
 @media (hover: hover) {
   .interactive-box:hover {
     border-color: var(--border-strong);
-    box-shadow: var(--shadow-md);
+    background-color: var(--surface);
   }
 }
 .interactive-box[data-open] {
@@ -192,6 +232,28 @@
 }
 .interactive-box:has(> * :focus-visible, > :focus-visible) {
   border-color: var(--border-strong);
+}
+@media (hover: hover) {
+  .interactive-box h3 {
+    transition: translate var(--duration-base) var(--ease-out);
+  }
+  .interactive-box:hover h3 {
+    translate: 4px 0;
+  }
+}
+
+/* Links de contato: o sublinhado vermelho se enche ao passar o mouse. */
+.link-fill {
+  background: linear-gradient(var(--accent), var(--accent)) left bottom / 100% 3px no-repeat;
+  padding-bottom: 0.1em;
+  transition:
+    background-size var(--duration-base) var(--ease-out),
+    color var(--duration-base) var(--ease-out);
+}
+a:hover > .link-fill,
+a:focus-visible > .link-fill {
+  background-size: 100% 100%;
+  color: var(--accent-contrast);
 }
 .chevron {
   transition: rotate var(--duration-base) var(--ease-out);
@@ -237,6 +299,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .interactive-box,
+  .interactive-box h3,
+  .link-fill,
   .nav-link::after,
   .chevron,
   .collapsible,

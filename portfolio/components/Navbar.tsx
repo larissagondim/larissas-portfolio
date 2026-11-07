@@ -46,9 +46,9 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-bg/75 backdrop-blur-md backdrop-saturate-150">
       <nav
         aria-label="principal"
-        className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3"
+        className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3"
       >
-        <a href="#" className="text-sm font-semibold lowercase">
+        <a href="#" className="text-sm font-extrabold tracking-tight lowercase">
           larissa gondim
         </a>
 

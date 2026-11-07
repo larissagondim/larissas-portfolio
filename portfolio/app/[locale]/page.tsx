@@ -44,18 +44,18 @@ export default async function Home({ params }: HomeProps) {
   return (
     <>
       <Navbar />
-      <main className="mx-auto flex max-w-4xl flex-col gap-section px-4 pb-24 pt-28">
+      <main className="mx-auto flex max-w-5xl flex-col gap-section px-4 pb-24 pt-28">
         <Hero />
         <div data-reveal>
           <GithubActivity />
         </div>
 
         <Section id="sobre" title={Nav.about}>
-          <p data-reveal className="max-w-[68ch] leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
+          <p data-reveal className="max-w-[68ch] text-lg leading-relaxed text-muted">{renderLinks(messages.About.description)}</p>
         </Section>
 
         <Section id="projetos" title={Nav.projects}>
-          <div className="grid items-stretch gap-6 md:grid-cols-2">
+          <div className="flex flex-col gap-4">
             {messages.Projects.map((project) => (
               <div key={project.id} data-reveal className="flex">
                 <ProjectCard project={project} labels={messages.Labels} />
@@ -77,15 +77,15 @@ export default async function Home({ params }: HomeProps) {
         </Section>
 
         <Section id="contato" title={Nav.contact}>
-          <p data-reveal className="text-sm text-muted">{messages.Contact.text}</p>
-          <ul data-reveal className="flex flex-wrap gap-6 text-sm font-medium">
+          <p data-reveal className="max-w-[48ch] text-muted">{messages.Contact.text}</p>
+          <ul data-reveal className="flex flex-wrap gap-x-8 gap-y-3 text-3xl font-bold tracking-tight lowercase sm:text-4xl">
             {contacts.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
                   {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
                 >
-                  {label}
+                  <span className="link-fill">{label}</span>
                 </a>
               </li>
             ))}

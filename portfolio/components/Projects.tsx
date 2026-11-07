@@ -28,17 +28,19 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
       ref={ref}
       onClick={onBoxClick}
       data-open={open || undefined}
-      className="interactive-box flex flex-1 cursor-pointer flex-col gap-4 rounded-box border border-line bg-surface p-5 shadow-box"
+      className="interactive-box flex flex-1 cursor-pointer flex-col gap-3 rounded-box border border-line p-5"
     >
       <div>
         <div className="flex items-start justify-between gap-3">
-          <h3 className="font-semibold lowercase">{project.title}</h3>
-          <span className="shrink-0 text-xs text-muted">{project.status}</span>
-        </div>
+          <h3 className="text-lg font-bold tracking-tight lowercase">{project.title}</h3>
+          <span className="inline-flex shrink-0 items-center gap-1.5 text-xs text-muted">
+            <span aria-hidden className="size-2 rounded-full bg-accent" />
+            {project.status}
+          </span>        </div>
         <p className="mt-2 text-sm text-muted">{project.shortDescription}</p>
       </div>
 
-      <p className="text-xs text-muted lowercase">{project.technologies.join(" · ")}</p>
+      <p className="text-xs text-muted lowercase">{project.technologies.join(", ")}</p>
 
       <div className="text-sm">
         <button
@@ -66,7 +68,7 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
         href={project.repository}
         target="_blank"
         rel="noreferrer"
-        className="mt-auto inline-flex items-center gap-2 self-start text-sm font-medium"
+        className="mt-auto inline-flex items-center gap-2 self-start text-sm font-medium underline decoration-accent decoration-2 underline-offset-4"
       >
         <FolderGit className="size-4" aria-hidden /> {labels.code}
       </a>
